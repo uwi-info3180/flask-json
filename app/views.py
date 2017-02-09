@@ -28,6 +28,10 @@ def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
 
+@app.route('/jquery-get-json')
+def get_data():
+    return render_template('jquery-get-json.html')
+
 @app.route('/get-current-user')
 def get_current_user():
     return jsonify(username=username, email=email, id_number=id_number)

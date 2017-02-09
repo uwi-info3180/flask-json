@@ -1,0 +1,18 @@
+<html>
+<head> 
+  <title>Get JSON using jQuery</title>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+</head>
+<body>
+<div class="container">
+  <h1 id="title">Hello World</h1>
+  <p>Did you see the alert?</p>
+</div>
+
+<script>
+$.getJSON('/get-current-user', function(data) {
+    alert(data);
+});
+</script>
+</body>
+</html>
